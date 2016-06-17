@@ -26,11 +26,11 @@ $(function(){
 	var relang = lang.toLowerCase();
 	var getCookieLang = getCookie('cookieLang');
 	if(getCookieLang){
-		var translator = $('body').translate({lang: getCookieLang, t: dict});
+		var translator = $('body').translate({lang: "zhtw", t: dict});
 	}else if(relang === 'zh-tw' || relang === 'zh-cn'){
 		var translator = $('body').translate({lang: "zhtw", t: dict});
 	}else{
-		var translator = $('body').translate({lang: "en", t: dict});
+		var translator = $('body').translate({lang: "zhtw", t: dict});
 	}
 	$('.btn-translate').on('click', function(){
 		var lang = $(this).attr('id');
